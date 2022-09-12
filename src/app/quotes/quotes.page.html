@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="lightpurple">
+    <ion-title >quotes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar color="lightpurple">
+  <ion-searchbar placeholder="Buscar" animated (ionChange)="searchQuotes($event)"></ion-searchbar>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let q of list_quotes">
+        <ion-card>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4">
+                <ion-icon size= "large"name="flower"></ion-icon>
+              </ion-col>
+              <ion-col size="8" class="ion-align-items-self-end">
+                
+                <ion-card-title style="text-align:end ">
+                {{q.author}}</ion-card-title>
+                <ion-icon name="paper"></ion-icon>
+              </ion-col>
+              <span class="content_desc">{{q.content}}</span>
+              
+            </ion-row>
+           
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+   
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-infinite-scroll (ionInfinite)="loadMoreQuotes($ev)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"
+    loadingText="Loading... ">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+  
+   
+
+</ion-content>

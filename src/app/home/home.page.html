@@ -1,0 +1,48 @@
+<ion-header >
+  <ion-toolbar color="lightpurple">
+    <ion-title>Random Quote</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" >
+      
+      
+
+        <ion-card>
+          <ion-card-content>
+            <ion-row>
+              <ion-col size="4">
+                <ion-icon size= "large"name="attach"></ion-icon>
+             
+              </ion-col>
+              <ion-col size="8" class="ion-align-items-self-end">
+                <ion-card-subtitle style="text-align:end " >{{quote.tags}}</ion-card-subtitle>
+                <ion-card-title style="text-align:end ">
+             {{quote.author}}</ion-card-title>
+              
+              </ion-col>
+              <span class="content_desc">  {{quote.content}}</span>
+              
+            </ion-row>
+            <ion-button (click)="generateOtherQuote()"> <ion-icon name="refresh"></ion-icon></ion-button>
+          </ion-card-content>
+       
+         
+        </ion-card>
+
+       
+   
+   
+   
+
+  <!-- <ion-infinite-scroll (ionInfinite)="loadMoreQuotes($ev)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"
+    loadingText="Loading... ">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+  
+   
+
+</ion-content>
